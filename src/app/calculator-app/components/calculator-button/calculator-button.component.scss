@@ -1,0 +1,58 @@
+@import '/src/assets/css/colors';
+
+.calculator-button {
+
+    all: unset;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: $light_grayish_orange;
+    border-bottom: solid 4px $grayish_orange;
+    color: $very_dark_grayish_blue;
+    height: 2.5em;
+    cursor: pointer;
+
+    &:hover {
+
+        margin-top: 1px;
+        border-bottom-width: 3px;
+
+    }
+
+    &:focus {
+
+        margin-top: 2px;
+        border-bottom-width: 2px;
+
+    }
+
+}
+
+.primary-button {
+
+    background-color: $desaturated_dark_blue;
+    border-bottom-color: $desaturated_dark_blue_outline;
+    color: $white;
+
+}
+
+.secondary-button {
+
+    background-color: $red;
+    border-bottom-color: $dark_red;
+    color: $white;
+
+}
+
+@media (max-width: 600px) {
+
+    .calculator-button:hover {
+
+        margin-top: 2px !important;
+        border-bottom-width: 2px !important;
+
+    }
+
+}

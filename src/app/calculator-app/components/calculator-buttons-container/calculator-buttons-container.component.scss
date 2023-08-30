@@ -1,0 +1,32 @@
+@import '/src/assets/css/colors';
+
+.calculator-buttons-container {
+
+    background-color: $blue_toggle_background;
+    border-radius: 8px;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    row-gap: 0.8em;
+    column-gap: 0.8em;
+
+    .large-button {
+
+        grid-column: span 2;
+    
+    }
+    
+}
+
+@media (max-width: 600px) {
+
+    .calculator-buttons-container {
+
+        row-gap: 0.6em !important;
+        column-gap: 0.6em !important;
+
+    }
+
+}

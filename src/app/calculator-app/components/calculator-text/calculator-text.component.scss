@@ -1,0 +1,15 @@
+@import '/src/assets/css/colors';
+
+.calculator-text-container {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.7em 0.5em;
+    height: 1em;
+    border-radius: 8px;
+    background-color: $blue_screen_background;
+    font-size: 2em;
+    cursor: default;
+
+}

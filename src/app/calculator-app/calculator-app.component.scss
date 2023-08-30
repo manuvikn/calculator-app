@@ -1,0 +1,39 @@
+@import '/src/assets/css/colors';
+
+@font-face {
+    font-family: leagueSpartan;
+    src: url('/assets/fonts/league_spartan.ttf');
+}
+
+:host {
+
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue_main_background;
+    color: $white;
+    font-family: leagueSpartan;
+    font-weight: 700;
+    font-size: 1.5em;
+
+}
+
+.attribution {
+
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    font-weight: 200;
+    background-color: $blue_screen_background;
+    padding: 4px;
+
+    a {
+        color: $white;
+        font-weight: 400;
+    }
+
+}
