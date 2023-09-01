@@ -7,14 +7,6 @@ import { Component } from "@angular/core";
 })
 export class CalculatorBoxComponent {
 
-    calculatorValue: string = '0';
-
     constructor() { }
-
-    emitCalculatorValue(calculatorValue: any): void {
-        
-        this.calculatorValue = calculatorValue;
-
-    }
 
 }

@@ -1,14 +1,30 @@
-import { Component, Input } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Subscription } from "rxjs";
+import { CalculatorAppService } from "../../services/calculator-app.service";
 
 @Component({
     selector: 'ca-calculator-text',
     templateUrl: './calculator-text.component.html',
     styleUrls: ['./calculator-text.component.scss']
 })
-export class CalculatorTextComponent {
+export class CalculatorTextComponent implements OnInit, OnDestroy {
 
-    @Input() calculatorValue: string = ''; 
+    calculatorValue: string = ''; 
+    calculatorValueSubscription: Subscription | undefined;
 
-    constructor() { }
+    constructor(private calculatorAppService: CalculatorAppService) { }
+
+    ngOnInit(): void {
+        
+        this.calculatorValueSubscription = this.calculatorAppService.getCalculatorValue()
+            .subscribe(v => this.calculatorValue = v);
+
+    }
+
+    ngOnDestroy(): void {
+        
+        this.calculatorValueSubscription?.unsubscribe();
+
+    }
 
 }

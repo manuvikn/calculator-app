@@ -1,0 +1,26 @@
+<div class="flex-container">
+
+    <span class="theme-title">THEME</span>
+
+    <div class="slide-container">
+
+        <div class="labels-container">
+
+            <label [ngClass]="{'active': themeValue === 0}" for="first-theme">1</label>
+            <label [ngClass]="{'active': themeValue === 1}" for="second-theme">2</label>
+            <label [ngClass]="{'active': themeValue === 2}" for="third-theme">3</label>
+
+        </div>
+
+        <div class="slide-element-container">
+
+            <span #slideValue class="slide-element-view-value"></span>
+            <input (change)="toggleValue()" [(ngModel)]="themeValue" [ngClass]="{'active': themeValue === 0}" type="radio" [value]="0" id="first-theme" name="theme">
+            <input (change)="toggleValue()" [(ngModel)]="themeValue" [ngClass]="{'active': themeValue === 1}" type="radio" [value]="1" id="second-theme" name="theme">
+            <input (change)="toggleValue()" [(ngModel)]="themeValue" [ngClass]="{'active': themeValue === 2}" type="radio" [value]="2" id="third-theme" name="theme">
+
+        </div>
+
+    </div>
+
+</div>

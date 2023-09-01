@@ -1,5 +1,3 @@
-@import '/src/assets/css/colors';
-
 .calculator-text-container {
 
     display: flex;
@@ -8,8 +6,18 @@
     padding: 0.7em 0.5em;
     height: 1em;
     border-radius: 8px;
-    background-color: $blue_screen_background;
+    background-color: var(--blue-screen-background);
     font-size: 2em;
     cursor: default;
+
+}
+
+@media (max-width: 500px) {
+
+    .calculator-text-container {
+
+        font-size: 1.5em;
+
+    }
 
 }

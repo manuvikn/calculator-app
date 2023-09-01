@@ -3,20 +3,20 @@
     <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="7"></ca-calculator-button>
     <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="8"></ca-calculator-button>
     <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="9"></ca-calculator-button>
-    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" [classList]="['primary-button']" value="DEL"></ca-calculator-button>
+    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" [classList]="['primary-button', 'action-button']" value="DEL"></ca-calculator-button>
     <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="4"></ca-calculator-button>
     <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="5"></ca-calculator-button>
     <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="6"></ca-calculator-button>
-    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="+"></ca-calculator-button>
+    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="+" [classList]="['action-button']" [ngClass]="{'active': clickedButton === '+'}"></ca-calculator-button>
     <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="1"></ca-calculator-button>
     <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="2"></ca-calculator-button>
     <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="3"></ca-calculator-button>
-    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="-"></ca-calculator-button>
+    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="-" [classList]="['action-button']" [ngClass]="{'active': clickedButton === '-'}"></ca-calculator-button>
     <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="."></ca-calculator-button>
     <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="0"></ca-calculator-button>
-    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="/"></ca-calculator-button>
-    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="x"></ca-calculator-button>
-    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" class="large-button" [classList]="['primary-button']" value="RESET"></ca-calculator-button>
-    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" class="large-button" [classList]="['secondary-button']" value="="></ca-calculator-button>
+    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="/" [classList]="['action-button']" [ngClass]="{'active': clickedButton === '/'}"></ca-calculator-button>
+    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" value="x" [classList]="['action-button']" [ngClass]="{'active': clickedButton === 'x'}"></ca-calculator-button>
+    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" class="large-button" [classList]="['primary-button', 'action-button']" value="RESET"></ca-calculator-button>
+    <ca-calculator-button (clickCalculatorButton)="emitCalculatorValue( $event )" class="large-button" [classList]="['secondary-button', 'action-button']" value="="></ca-calculator-button>
 
 </div>

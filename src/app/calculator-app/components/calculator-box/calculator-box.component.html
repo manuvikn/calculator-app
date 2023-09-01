@@ -1,13 +1,9 @@
 <div class="calculator-box-container">
 
-    <div class="calculator-header-container">
+    <ca-calculator-header></ca-calculator-header>
 
-        <span>calc</span>
+    <ca-calculator-text></ca-calculator-text>
 
-    </div>
-
-    <ca-calculator-text [calculatorValue]="calculatorValue"></ca-calculator-text>
-
-    <ca-calculator-buttons-container (calculatorValueChange)="emitCalculatorValue( $event )"></ca-calculator-buttons-container>
+    <ca-calculator-buttons-container></ca-calculator-buttons-container>
 
 </div>

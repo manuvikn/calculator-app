@@ -21,8 +21,14 @@ export class CalculatorButtonComponent implements AfterViewInit {
     }
 
     clickCalculatorButton(): void {
-
+        
         this.clickCalculatorButtonEmitter.emit( this.value );
+
+    }
+
+    preventKeyDown(event: KeyboardEvent) {
+
+        event.preventDefault();
 
     }
 

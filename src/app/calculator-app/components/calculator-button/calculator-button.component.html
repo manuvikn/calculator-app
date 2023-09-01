@@ -1,1 +1,1 @@
-<button #calculatorButton (click)="clickCalculatorButton()" class="calculator-button">{{ value }}</button>
+<button #calculatorButton (click)="clickCalculatorButton()" (keydown)="preventKeyDown($event)" class="calculator-button">{{ value }}</button>

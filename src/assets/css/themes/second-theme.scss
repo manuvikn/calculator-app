@@ -1,0 +1,28 @@
+.second-theme {
+
+    // Backgrounds
+
+    --blue-main-background: hsl(0, 0%, 90%);
+    --blue-toggle-background: hsl(0, 5%, 81%);
+    --blue-screen-background: hsl(0, 0%, 93%);
+
+    // Keys
+
+    // (key background)
+    --desaturated-dark-blue: hsl(185, 42%, 37%);
+    --desaturated-dark-blue-outline: hsl(185, 58%, 25%);
+
+    // (key background, toggle)
+    --red: hsl(25, 98%, 40%);
+    --dark-red: hsl(25, 99%, 27%);
+
+    // (key background)
+    --light-grayish-orange: hsl(45, 7%, 89%);
+    --grayish-orange: hsl(35, 11%, 61%);
+
+    // Text
+    --very-dark-grayish-blue: hsl(60, 10%, 19%);
+    --white: hsl(0, 0%, 100%);
+    --main-text-color: hsl(60, 10%, 19%);
+
+}

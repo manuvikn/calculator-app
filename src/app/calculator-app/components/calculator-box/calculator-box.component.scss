@@ -1,5 +1,3 @@
-@import '/src/assets/css/colors';
-
 :host {
 
     width: 500px;
@@ -10,15 +8,6 @@
         display: flex;
         flex-direction: column;
         row-gap: 1em;
-
-        .calculator-header-container {
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-
-        }
             
     }
 
@@ -29,12 +18,6 @@
     :host {
 
         width: 100%;
-
-        .calculator-header-container {
-
-            font-size: 1.5em;
-
-        }
 
     }
 

@@ -1,8 +1,6 @@
-@import '/src/assets/css/colors';
-
 .calculator-buttons-container {
 
-    background-color: $blue_toggle_background;
+    background-color: var(--blue-toggle-background);
     border-radius: 8px;
     padding: 1em;
     display: grid;
@@ -17,10 +15,16 @@
         grid-column: span 2;
     
     }
+
+    .active ::ng-deep .calculator-button {
+
+        filter: brightness(0.7);
+
+    }
     
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 
     .calculator-buttons-container {
 

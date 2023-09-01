@@ -6,10 +6,14 @@ import { CalculatorBoxComponent } from "./components/calculator-box/calculator-b
 import { CalculatorTextComponent } from "./components/calculator-text/calculator-text.component";
 import { CalculatorButtonsContainerComponent } from "./components/calculator-buttons-container/calculator-buttons-container.component";
 import { CalculatorButtonComponent } from "./components/calculator-button/calculator-button.component";
+import { CalculatorHeaderComponent } from "./components/calculator-header/calculator-header.component";
+import { SlideElementComponent } from "./shared/slide-element/slide-element.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     imports: [
         CommonModule,
+        FormsModule,
         CalculatorAppRoutingModule
     ],
     exports: [],
@@ -18,7 +22,9 @@ import { CalculatorButtonComponent } from "./components/calculator-button/calcul
         CalculatorBoxComponent,
         CalculatorTextComponent,
         CalculatorButtonsContainerComponent,
-        CalculatorButtonComponent
+        CalculatorButtonComponent,
+        CalculatorHeaderComponent,
+        SlideElementComponent
     ]
 })
 export class CalculatorAppModule { }

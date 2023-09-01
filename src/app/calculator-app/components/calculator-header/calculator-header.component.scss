@@ -1,0 +1,24 @@
+.calculator-header-container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+@media (max-width: 500px) {
+
+    :host {
+
+        width: 100%;
+
+        .calculator-header-container {
+
+            font-size: 1.5em;
+
+        }
+
+    }
+
+}
