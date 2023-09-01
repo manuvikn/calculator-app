@@ -1,0 +1,46 @@
+.third-theme {
+
+    // Backgrounds
+
+    --blue-main-background: hsl(268, 75%, 9%);
+    --blue-toggle-background: hsl(268, 71%, 12%);
+    --blue-screen-background: hsl(268, 71%, 12%);
+
+    // Keys
+
+    // (key background)
+    --desaturated-dark-blue: hsl(281, 89%, 26%);
+    --desaturated-dark-blue-outline: hsl(285, 91%, 52%);
+
+    // (key background, toggle)
+    --red: hsl(176, 100%, 44%);
+    --dark-red: hsl(177, 92%, 70%);
+
+    // (key background)
+    --light-grayish-orange: hsl(268, 47%, 21%);
+    --grayish-orange: hsl(290, 70%, 36%);
+
+    // Text
+    --very-dark-grayish-blue:  hsl(198, 20%, 13%);
+    --white: hsl(0, 0%, 100%);
+    --main-text-color: hsl(52, 100%, 62%);
+
+    .calculator-button {
+
+        color: var(--main-text-color) !important;
+
+    }
+
+    .primary-button {
+
+        color: var(--white) !important;
+
+    }
+
+    .secondary-button {
+
+        color: var(--very-dark-grayish-blue) !important;
+
+    }
+
+}
