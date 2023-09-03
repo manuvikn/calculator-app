@@ -9,3 +9,15 @@ body {
     margin: 0px;
 
 }
+
+span, label, button, footer, a {
+
+    transition: color 0.5s !important;
+
+}
+
+button, div, ca-calculator-app {
+
+    transition: background-color 0.5s;
+
+}
