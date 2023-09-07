@@ -1,12 +1,14 @@
+@import '/src/assets/css/themes/theme-manager.scss';
+
 @font-face {
     font-family: leagueSpartan;
-    src: url('../../assets/fonts/league_spartan.ttf');
+    src: url('/assets/css/fonts/league_spartan.ttf');
 }
 
 :host {
 
     width: 100%;
-    min-height: 100%;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +17,45 @@
     font-family: leagueSpartan;
     font-weight: 700;
     font-size: 1.5em;
+    transition: background-color 0.5s;
+
+    ::ng-deep {
+
+        span, label, button, footer, a {
+
+            transition: color 0.5s, left 0.4s !important;
+        
+        }
+        
+        button, div {
+        
+            transition: background-color 0.5s;
+        
+        }
+
+        *,
+        * ::after,
+        * ::before {
+            box-sizing: content-box !important;
+        }
+
+    }
+
+}
+
+::ng-deep .calculator-app app-navbar {
+
+    height: auto !important;
+
+    .custom-nav {
+
+        color: var(--main-text-color);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+
+    }
 
 }
 
