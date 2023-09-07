@@ -199,4 +199,10 @@ export class CalculatorAppService {
 
     }
 
+    removeTheme(): void {
+
+        document.body.classList.remove( this.themeValues[ this.theme ] );
+
+    }
+
 }
