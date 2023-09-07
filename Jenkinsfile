@@ -36,7 +36,7 @@ pipeline {
           if (currentBranch == 'master') {
             echo 'Deploying...'
             sh 'rm -rf /var/www/html/projects/calculator-app'
-            sh 'mv dist/calculator-app /var/www/html/projects/'
+            sh 'mv dist/* /var/www/html/projects/'
             sh 'sudo service apache2 restart'
           } else {
             echo 'No master branch. There wont be any deployment.'
