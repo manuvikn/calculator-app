@@ -18,10 +18,8 @@ pipeline {
       steps {
         script {
           sh 'npm install'
-
           sh 'npm run build'
-
-          archiveArtifacts 'dist/**'
+          archiveArtifacts allowEmptyArchive: true, artifacts: 'dist/**'
         }
 
       }
@@ -34,10 +32,17 @@ pipeline {
           echo "Current branch: ${currentBranch}"
 
           if (currentBranch == 'master') {
+            
             echo 'Deploying...'
-            sh 'rm -rf /var/www/html/projects/calculator-app'
+            def directoryPath = '/var/www/html/projects'
+            def directoryExists = fileExists(directoryPath)
+
+            if (directoryExists) {
+              sh "rm -rf ${directoryPath}/calculator-app"
+            }
             sh 'mv dist/* /var/www/html/projects/'
             sh 'sudo service apache2 restart'
+
           } else {
             echo 'No master branch. There wont be any deployment.'
           }
