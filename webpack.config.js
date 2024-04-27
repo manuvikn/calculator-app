@@ -1,56 +1,22 @@
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const mf = require("@angular-architects/module-federation/webpack");
-const path = require("path");
-const share = mf.share;
+const {
+  shareAll,
+  withModuleFederationPlugin,
+} = require("@angular-architects/module-federation/webpack");
 
-const sharedMappings = new mf.SharedMappings();
-sharedMappings.register(
-  path.join(__dirname, 'tsconfig.json'),
-  [/* mapped paths to share */]);
+module.exports = withModuleFederationPlugin({
+  name: "mfe1",
 
-module.exports = {
-  output: {
-    uniqueName: "calculatorApp",
-    publicPath: "auto"
+  exposes: {
+    // Update this whole line (both, left and right part):
+    "./CalculatorAppModule":
+      "./src/app/calculator-app/calculator-app.module.ts",
   },
-  optimization: {
-    runtimeChunk: false
-  },   
-  resolve: {
-    alias: {
-      ...sharedMappings.getAliases(),
-    }
-  },
-  experiments: {
-    outputModule: true
-  },
-  plugins: [
-    new ModuleFederationPlugin({
-        library: { type: "module" },
 
-        // For remotes (please adjust)
-        name: "calculatorApp",
-        filename: "remoteEntry.js",
-        exposes: {
-            './CalculatorAppModule': './/src/app/calculator-app/calculator-app.module.ts',
-        },        
-        
-        // For hosts (please adjust)
-        // remotes: {
-        //     "mfe1": "http://localhost:3000/remoteEntry.js",
-
-        // },
-
-        shared: share({
-          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
-          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
-          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
-          "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-
-          ...sharedMappings.getDescriptors()
-        })
-        
-    }),
-    sharedMappings.getPlugin()
-  ],
-};
+  // shared: {
+  //   ...shareAll({
+  //     singleton: false,
+  //     strictVersion: false,
+  //     requiredVersion: "auto",
+  //   }),
+  // },
+});
