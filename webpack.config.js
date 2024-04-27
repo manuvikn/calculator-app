@@ -4,7 +4,7 @@ const {
 } = require("@angular-architects/module-federation/webpack");
 
 module.exports = withModuleFederationPlugin({
-  name: "mfe1",
+  name: "calculatorApp",
 
   exposes: {
     // Update this whole line (both, left and right part):
@@ -12,11 +12,11 @@ module.exports = withModuleFederationPlugin({
       "./src/app/calculator-app/calculator-app.module.ts",
   },
 
-  // shared: {
-  //   ...shareAll({
-  //     singleton: false,
-  //     strictVersion: false,
-  //     requiredVersion: "auto",
-  //   }),
-  // },
+  shared: {
+    ...shareAll({
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: "auto",
+    }),
+  },
 });
